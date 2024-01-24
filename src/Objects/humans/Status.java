@@ -1,11 +1,12 @@
 package Objects.humans;
 
 public enum Status {
+    ALIVE("alive"),
     DYING("dying"),
     DEAD("dead"),
     STRUCK("struck");
 
-    private String status;
+    private final String status;
 
     Status(String status) {
         this.status = status;

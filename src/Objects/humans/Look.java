@@ -3,7 +3,7 @@ package Objects.humans;
 public enum Look {
     TERRIBLE("terrible");
 
-    private String look;
+    private final String look;
 
     Look (String look) {
         this.look = look;

@@ -10,5 +10,8 @@ public class Nurse extends Human {
         System.out.printf("%s is carrying the %s %s with %s.%n", getName(), thing, description, human);
     }
 
+    public void dropSmth(Thing thing) {
+        System.out.printf("%s dropped the %s.%n", getName(), thing);
+    }
 
 }

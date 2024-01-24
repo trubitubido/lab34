@@ -1,7 +1,8 @@
 package Objects.humans;
 
 public enum Action {
-    RUNNING("running");
+    RUNNING("running"),
+    SOBBING("sobbing");
 
     private final String action;
 

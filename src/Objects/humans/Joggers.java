@@ -5,5 +5,4 @@ public class Joggers extends Human {
         super(name, action);
     }
 
-
 }

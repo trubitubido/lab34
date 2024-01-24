@@ -1,9 +1,12 @@
 package Objects.things;
+import Objects.humans.Human;
 
-public abstract class Thing {
+public class Thing {
     private final String name;
     private int quantity;
     private String description;
+    private Human belonging;
+
 
     public Thing(String name) {
         this.name = name;
@@ -19,12 +22,21 @@ public abstract class Thing {
         this.description = description;
     }
 
+    public Thing(String name, Human human) {
+        this.name = name;
+        this.belonging = human;
+    }
+
     public String getDescription() {
         return description;
     }
 
     public String getName() {
         return name;
+    }
+
+    public Human getBelonging() {
+       return belonging;
     }
 
     @Override

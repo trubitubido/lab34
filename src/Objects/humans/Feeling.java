@@ -7,7 +7,8 @@ public enum Feeling {
     FEAR("fear"),
     ANXIETY("anxiety"),
     FRIGHTENED("frightened"),
-    FAINTNESS("faintness");
+    FAINTNESS("faintness"),
+    NAUSEOUS("nauseous");
 
     private final String feeling;
 

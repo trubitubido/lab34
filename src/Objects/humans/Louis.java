@@ -16,6 +16,10 @@ public class Louis extends Human {
     public Feeling doLSDAndReflection(LSD LSD, Dose dose) {
         var human = new Human(getName()) {
             public void doLSD() {
+
+                setLook(Look.TERRIBLE);
+                doneLSD = true;
+
                 if (dose == Dose.POWERFUL) {
                     System.out.printf("%s has taken a %s dose of %s.%n", getName(), dose, LSD);
                     setFeeling(Feeling.ANXIETY);
@@ -24,18 +28,17 @@ public class Louis extends Human {
                     System.out.printf("%s has taken %s dose of %s.%n", getName(), dose, LSD);
                     setFeeling(Feeling.DISORIENTATION);
                 }
-                doneLSD = true;
+
             }
         };
         human.doLSD();
         return human.getFeeling();
     }
 
-//
 
 
     @Override
-    public void feel () {
+    public void feel() {
         if (doneLSD) {
             if (getFeeling() == Feeling.ANXIETY) {
                 System.out.printf("%s has feelings of %s and %s.%n", getName(), Feeling.DISORIENTATION, Feeling.UNREALTY);
@@ -53,7 +56,7 @@ public class Louis extends Human {
     }
 
 
-    public void worry () {
+    public void worry() {
         if ((doneLSD) && (isFilled)) System.out.printf("%s is %s.%n", getName(), Feeling.FRIGHTENED);
     }
 
@@ -62,6 +65,10 @@ public class Louis extends Human {
     }
 
 
+
+    public void hearSmFrom(Human human, Room room) {
+        System.out.printf("%s is hearing %s %s from the %s %s.%n", getName(), human, human.getAction(), room, room.getDescription());
+    }
 
 
 }
