@@ -4,8 +4,10 @@ public enum Feeling {
     UNREALTY("unreality"),
     DISORIENTATION("disorientation"),
     DESPAIR("despair"),
-    FEAR("fear");
-
+    FEAR("fear"),
+    ANXIETY("anxiety"),
+    FRIGHTENED("frightened"),
+    FAINTNESS("faintness");
 
     private final String feeling;
 

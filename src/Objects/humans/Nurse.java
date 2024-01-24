@@ -6,7 +6,9 @@ public class Nurse extends Human {
         super(name);
     }
 
-    public void carry(Thing thing) {
-
+    public void carryWith(Thing thing, String description, Human human) {
+        System.out.printf("%s is carrying the %s %s with %s.%n", getName(), thing, description, human);
     }
+
+
 }

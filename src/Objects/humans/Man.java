@@ -9,11 +9,8 @@ public class Man extends Human {
         super(name);
     }
 
-    private String condition;
+    private Status stat = Status.STRUCK;
 
-    public void doLSD() {
-        setCondition(Condition.HYPERSENSITIVITY);
 
-    }
 
 }
