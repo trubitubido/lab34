@@ -3,8 +3,6 @@ package enums;
 public enum Feeling {
     UNREALITY("unreality"),
     DISORIENTATION("disorientation"),
-//    DESPAIR("despair"),
-//    FEAR("fear"),
     ANXIETY("anxiety"),
     FRIGHTENED("frightened"),
     FAINTNESS("faintness"),
