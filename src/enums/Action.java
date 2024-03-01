@@ -1,4 +1,4 @@
-package Objects.humans;
+package enums;
 
 public enum Action {
     RUNNING("running"),

@@ -1,10 +1,10 @@
-package Objects.humans;
+package enums;
 
 public enum Feeling {
-    UNREALTY("unreality"),
+    UNREALITY("unreality"),
     DISORIENTATION("disorientation"),
-    DESPAIR("despair"),
-    FEAR("fear"),
+//    DESPAIR("despair"),
+//    FEAR("fear"),
     ANXIETY("anxiety"),
     FRIGHTENED("frightened"),
     FAINTNESS("faintness"),

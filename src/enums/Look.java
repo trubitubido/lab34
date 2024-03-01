@@ -1,4 +1,4 @@
-package Objects.humans;
+package enums;
 
 public enum Look {
     TERRIBLE("terrible");
@@ -11,6 +11,6 @@ public enum Look {
 
     @Override
     public String toString() {
-        return look;
+        return this.look;
     }
 }

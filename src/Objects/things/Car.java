@@ -1,5 +1,6 @@
 package Objects.things;
 import Objects.humans.*;
+import enums.Status;
 
 public class Car extends Thing {
     public Car(String name) {

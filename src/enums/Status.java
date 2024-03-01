@@ -1,7 +1,6 @@
-package Objects.humans;
+package enums;
 
 public enum Status {
-    ALIVE("alive"),
     DYING("dying"),
     DEAD("dead"),
     STRUCK("struck");

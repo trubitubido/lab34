@@ -5,6 +5,4 @@ public class LSD extends Thing {
         super(name);
     }
 
-    public Dose dose;
-
 }

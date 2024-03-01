@@ -1,4 +1,9 @@
 package Objects.humans;
+import enums.Action;
+import enums.Feeling;
+import enums.Look;
+import enums.Status;
+import exceptions.DeadException;
 import interfaces.Feel;
 import Objects.things.*;
 
@@ -97,14 +102,10 @@ public class Human implements Feel {
     }
 
     @Override
-    public void feel (Feeling feeling1, Feeling feeling2) {
-        System.out.printf("%s has feelings of %s and %s.%n", getName(), feeling1, feeling2);
-    }
-
-    @Override
     public void feel () {}
 
-    public void die() {
+    public void die() throws DeadException {
+        if (getStatus() == Status.DEAD) throw new DeadException(String.format("Person %s is already dead.%n", getName()));
         setStatus(Status.DEAD);
         System.out.printf("%s is %s.%n", getName(), getStatus());
     }
@@ -117,13 +118,13 @@ public class Human implements Feel {
         System.out.printf("%s %s to %s.%n", getName(), action, purpose);
     }
 
-    public void runOut() {
-        System.out.printf("%s ran out.%n", getName());
+    public void runOutOf(Room room) {
+        System.out.printf("%s ran out of the %s.%n", getName(), room);
     }
 
     public void lookAt(Thing thing, Human human) {
         if (thing.getBelonging() == human) System.out.printf("%s has looked at his/her %s.%n", getName(), thing);
-        if (thing.getBelonging() != human) System.out.printf("%s has looked at %s's %s.%n", getName(), thing.getBelonging(), thing);
+        else System.out.printf("%s has looked at %s's %s.%n", getName(), thing.getBelonging(), thing);
     }
 
     public void vomitDown(Thing thing, Human human) {

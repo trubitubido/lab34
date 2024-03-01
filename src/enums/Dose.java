@@ -1,4 +1,4 @@
-package Objects.things;
+package enums;
 
 public enum Dose {
     SMALL("small"),

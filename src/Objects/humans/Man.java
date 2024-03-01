@@ -1,8 +1,6 @@
 package Objects.humans;
 
-import Objects.things.LSD;
-
-import java.util.StringTokenizer;
+import enums.Status;
 
 public class Man extends Human {
     public Man (String name){
