@@ -8,7 +8,7 @@ import enums.Status;
 import static objects.things.Room.isFilled;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws CloneNotSupportedException {
 
         Louis louis = new Louis("Louis");
         Room room = new Room("room");
@@ -16,7 +16,7 @@ public class Main {
         LSD LSD = new LSD("LSD");
         DyingSibyl sibyl = new DyingSibyl("Sibyl", Status.DYING);
         Nurse nurse1 = new Nurse("Nurse");
-        Nurse nurse2 = new Nurse("Nurse");
+        Nurse nurse2 = (Nurse) nurse1.clone();
         Thing pinafore = new Thing("pinafore", nurse1);
         Stretchers stretchers = new Stretchers("stretchers", "used for people with spinal or neck injuries");
         Stretchers.End endOfStretchers = new Stretchers.End("end of the stretchers");
@@ -26,7 +26,7 @@ public class Main {
         Joggers joggers = new Joggers("joggers", Action.RUNNING);
         Human steve = new Human("Steve Masterton");
         Human cop1 = new Human("Campus Security cop");
-        Human cop2 = new Human("Campus Security cop");
+        Human cop2 = (Human) cop1.clone();
         Thing watch = new Thing("watch", louis);
         Human mary = new Human("Mary", Action.SOBBING);
         Phone phone = new Phone("phone");
@@ -65,7 +65,7 @@ public class Main {
         louis.act("subtracted two minutes");
 
         louis.hearSmFrom(mary, room1);
-        louis.think("Welcome back to school, little lady. Have a nice semester");
+        louis.think("Welcome back to school. Have a nice semester");
         louis.say("Mr. Pascow died at 10:09 A. M.");
 
         cop1.act("wiped the back of his hand across his mouth");

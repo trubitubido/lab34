@@ -9,7 +9,7 @@ import interfaces.Feel;
 import objects.things.*;
 
 
-public class Human implements Feel, Die {
+public class Human implements Feel, Die, Cloneable {
 
     private final String name;
     private Status status;
@@ -137,6 +137,11 @@ public class Human implements Feel, Die {
             if (thing.getBelonging() == human) System.out.printf("%s is vomiting down his/her %s.%n", getName(), thing);
             if (thing.getBelonging() != human) System.out.printf("%s is vomiting down %s's %s.%n", getName(), thing.getBelonging(), thing);
         }
+    }
+
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 
     @Override
