@@ -1,5 +1,5 @@
-package Objects.things;
-import Objects.humans.*;
+package objects.things;
+import objects.humans.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -16,7 +16,6 @@ public class Room extends Thing {
     private final ArrayList<Human> inRoom = new ArrayList<>();
     public static int peopleInRoom;
     public static boolean isFilled;
-//    private int i = 0;
 
 
     public void fillWithPeople() {
@@ -25,8 +24,11 @@ public class Room extends Thing {
     }
 
     public void removePeople() {
-        isFilled = false;
-        System.out.println("The room has cleared.");
+        if (!isFilled) System.out.println("The room is already empty.");
+        else {
+            isFilled = false;
+            System.out.println("The room has cleared.");
+        }
     }
 
 

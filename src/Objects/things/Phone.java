@@ -1,4 +1,4 @@
-package Objects.things;
+package objects.things;
 
 public class Phone extends Thing {
     public Phone(String name) {

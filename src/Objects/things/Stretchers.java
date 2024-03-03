@@ -1,4 +1,4 @@
-package Objects.things;
+package objects.things;
 
 public class Stretchers extends Thing {
     public Stretchers(String name, String description) {

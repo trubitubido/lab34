@@ -1,5 +1,5 @@
-package Objects.things;
-import Objects.humans.Human;
+package objects.things;
+import objects.humans.Human;
 
 public class Thing {
     private final String name;

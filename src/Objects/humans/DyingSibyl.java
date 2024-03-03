@@ -1,4 +1,4 @@
-package Objects.humans;
+package objects.humans;
 
 
 import enums.Status;

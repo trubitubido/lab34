@@ -1,18 +1,19 @@
-package Objects.humans;
+package objects.humans;
 
-import Objects.things.*;
+import objects.things.*;
 import enums.Dose;
 import enums.Feeling;
 import enums.Look;
+import exceptions.NotEmptyException;
 
-import static Objects.things.Room.isFilled;
+import static objects.things.Room.isFilled;
 
 
 public class Louis extends Human {
+
     public Louis(String name) {
         super(name);
     }
-
 
 
     public boolean doneLSD;
@@ -20,7 +21,6 @@ public class Louis extends Human {
     public Feeling doLSDAndReflection(LSD LSD, Dose dose) {
         var human = new Human(getName()) {
             public void doLSD() {
-                setLook(Look.TERRIBLE);
                 if (dose == Dose.POWERFUL) {
                     System.out.printf("%s has taken a %s dose of %s.%n", getName(), dose, LSD);
                     setFeeling(Feeling.ANXIETY);
@@ -33,6 +33,7 @@ public class Louis extends Human {
             }
         };
         human.doLSD();
+        setLook(Look.TERRIBLE);
         return human.getFeeling();
     }
 
@@ -57,7 +58,13 @@ public class Louis extends Human {
     }
 
     public void worry() {
-        if ((doneLSD) && (isFilled)) System.out.printf("%s is %s.%n", getName(), Feeling.FRIGHTENED);
+        try {
+            if (doneLSD && isFilled) System.out.printf("%s is %s.%n", getName(), Feeling.FRIGHTENED);
+            if (doneLSD && !isFilled) throw new NotEmptyException("The room is empty. Nothing to worry about.");
+        }
+        catch (NotEmptyException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     public void thinkOfJoggers(Human human, String detail, String time) {

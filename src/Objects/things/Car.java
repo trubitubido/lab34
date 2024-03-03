@@ -1,5 +1,5 @@
-package Objects.things;
-import Objects.humans.*;
+package objects.things;
+import objects.humans.*;
 import enums.Status;
 
 public class Car extends Thing {

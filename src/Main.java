@@ -1,11 +1,11 @@
-import Objects.humans.*;
-import Objects.things.*;
+import objects.humans.*;
+import objects.things.*;
 import enums.Action;
 import enums.Dose;
 import enums.Feeling;
 import enums.Status;
 
-import static Objects.things.Room.isFilled;
+import static objects.things.Room.isFilled;
 
 public class Main {
     public static void main(String[] args) {
@@ -28,7 +28,6 @@ public class Main {
         Human cop1 = new Human("Campus Security cop");
         Human cop2 = new Human("Campus Security cop");
         Thing watch = new Thing("watch", louis);
-        Human masterton = new Human("Masterton");
         Human mary = new Human("Mary", Action.SOBBING);
         Phone phone = new Phone("phone");
         Room room1 = new Room("room", "where Masterton had sequestered the people who had brought Pascow in");
@@ -71,10 +70,10 @@ public class Main {
 
         cop1.act("wiped the back of his hand across his mouth");
 
-        masterton.ask(louis, "are you really okay");
-        masterton.sayToAboutLook(louis);
+        steve.ask(louis, "are you really okay");
+        steve.sayToAboutLook(louis);
         louis.actTo("opened his mouth", "answer");
-        nurse1.dropSmth(endOfStretchers);
+        nurse1.drop(endOfStretchers);
         nurse1.setFeeling(Feeling.NAUSEOUS);
         nurse1.runOutOf(room);
         nurse1.vomitDown(pinafore, nurse1);

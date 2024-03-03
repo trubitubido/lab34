@@ -1,11 +1,11 @@
-package Objects.humans;
+package objects.humans;
 import enums.Action;
 import enums.Feeling;
 import enums.Look;
 import enums.Status;
 import exceptions.DeadException;
 import interfaces.Feel;
-import Objects.things.*;
+import objects.things.*;
 
 
 public class Human implements Feel {
@@ -30,6 +30,8 @@ public class Human implements Feel {
         this.name = name;
         this.action = action;
     }
+
+
 
     public Status getStatus() {
         return status;
