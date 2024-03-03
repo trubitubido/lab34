@@ -4,11 +4,12 @@ import enums.Feeling;
 import enums.Look;
 import enums.Status;
 import exceptions.DeadException;
+import interfaces.Die;
 import interfaces.Feel;
 import objects.things.*;
 
 
-public class Human implements Feel {
+public class Human implements Feel, Die {
 
     private final String name;
     private Status status;
@@ -106,6 +107,7 @@ public class Human implements Feel {
     @Override
     public void feel () {}
 
+    @Override
     public void die() throws DeadException {
         if (getStatus() == Status.DEAD) throw new DeadException(String.format("Person %s is already dead.%n", getName()));
         setStatus(Status.DEAD);
